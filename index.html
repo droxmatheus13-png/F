@@ -2,15 +2,42 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Meu Jogo FNAF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocolo Vazio - Fangame</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div id="tela-inicial">
-        <h1 class="titulo">FIVE NIGHTS AT MOBILE</h1>
-        <button class="botao-jogar" onclick="iniciarJogo()">NEW GAME</button>
-    </div>
+    <section id="tela-inicial">
+        <div class="overlay-estatica"></div>
+        <h1 class="titulo-jogo">PROTOCOLO<br><span class="subtitulo">VAZIO</span></h1>
+        
+        <div class="menu-principal">
+            <button class="btn-menu" onclick="iniciarJogo()">NEW GAME</button>
+            <button class="btn-menu disabled">CONTINUE</button>
+            <button class="btn-menu">OPTIONS</button>
+        </div>
+    </section>
+
+    <section id="escritorio" class="hidden">
+        <div class="interface-topo">
+            <div id="display-hora">12 AM</div>
+            <div id="display-energia">POWER: 100%</div>
+        </div>
+
+        <div class="cenario-container">
+            <img src="escritorio_centro.jpg" id="imagem-escritorio" alt="Escritório">
+        </div>
+
+        <div class="controles-portas">
+            <button class="btn-porta" id="porta-esq">DOOR</button>
+            <button class="btn-porta" id="porta-dir">DOOR</button>
+        </div>
+
+        <div class="aba-monitor" onclick="toggleCameras()">
+            <span>MONITOR</span>
+        </div>
+    </section>
 
     <script src="script.js"></script>
 </body>
