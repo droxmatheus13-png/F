@@ -1,0 +1,49 @@
+body {
+    background-color: black; /* Fundo preto sempre */
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+#tela-inicial {
+    text-align: center;
+    background-image: url('sua-foto-do-animatronico.jpg'); /* Aqui vai sua arte */
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.titulo {
+    font-size: 3rem;
+    text-shadow: 2px 2px 10px red;
+    animation: glitch 1s infinite;
+}
+
+/* Efeito de interferência de TV */
+@keyframes glitch {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; transform: skew(2deg); }
+    100% { opacity: 1; }
+}
+
+.botao-jogar {
+    background: none;
+    color: white;
+    border: 2px solid white;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.botao-jogar:hover {
+    background-color: white;
+    color: black;
+}
